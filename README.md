@@ -47,11 +47,17 @@ Programmable 210 NEOPIXEL LED HPR saucer/spool
 
 
 ## Vehicle Build
-- Order a 12in piece of thin-wall 29 mm fiberglass tube for the motor mount to complete the build
-- You also need a carbon fiber launch lug adapter
-- The optimal length for a saucer or spool is L =1.5 D Where D is the diameter of the spool 
+- Order a 12in piece of thin-wall 29 mm fiberglass tube from [Mach-1 Rocketry](https://www.mach1rocketry.com/product-page/fiberglass-motor-mount-tubes) for the motor mount (you need 7")
+- You also need a carbon fiber launch lug adapter, you can order a unidirectional carbon fiber rod for a 1/8" Estes rod here from [Rockwest Composites](https://www.rockwestcomposites.com/uni-c1-l30)
+- For length, order 7" to 12" quantities
+- The optimal length for a saucer or spool is L =1.5 D Where D is the diameter of the spool
 - The Saucer Plate is - 4.54" diameter so you need a 6.8" long 29mm tube for optimal stability.
 - See also [Spool Rocket Center of Pressure](https://aerorocket.com/FinSim/Spool-Rocket.pdf)
 
 ## Flight Setup
 - Use a small battery and tape to the side of the airframe section used as motor mount
+- The [400ma Adafruit](https://www.adafruit.com/product/3898) LIPO is perfect to tape to the side of the motor tube and gets about 15 minutes with Pikachu strobe sequence activated
+- Use the [ASP-Rocketry Hang-time](https://www.asp-rocketry.com/ecommerce/Hang-Time-Competition-Parachutes.cfm?cat_id=41) Mylar parachute and "dog barf" for protection. Spectacular night flying is possible with the 36" Mylar chute.
+
+
+

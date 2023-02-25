@@ -18,7 +18,7 @@ Programmable 210 NEOPIXEL LED HPR saucer/spool
 - Modified Adafruit Neopixel library to fit maximum number of full programmable neopixels on Attiny85
 - Programmable sequences
 
-## Setup
+## Software Setup
 
 - Download and install the [Arduino IDE](https://www.arduino.cc/en/software) (time of this writing it is Arduino IDE 2.0.3)
 - Connect the [AVR-ISP-MK2 Olimex](https://www.mouser.com/ProductDetail/Olimex-Ltd/AVR-ISP-MK2?qs=C3feHhap9Pq3CI42wNu37Q%3D%3D)  device programmer to the target and connect USB cable to your system.
@@ -39,6 +39,31 @@ Programmable 210 NEOPIXEL LED HPR saucer/spool
 - [2.1mm DC Barrel Jack Adapter](https://www.adafruit.com/product/1328) for Power Supply
 - [AVR-ISP-MK2 Olimex](https://www.mouser.com/ProductDetail/Olimex-Ltd/AVR-ISP-MK2?qs=C3feHhap9Pq3CI42wNu37Q%3D%3D)
 - Tagconnect [TC2030-IDC-NL](https://www.tag-connect.com/product/tc2030-idc-nl) AVR ICSP adapter
+
+
+## Development
+- Follow the Software Setup instructions above
+- Open the ufo29 sketch folder in the Arduino IDE, you should have the file ufo29.ino open
+- Configure the Arduino IDE ATTINY85 settings for the UFO29
+- Check the below settings once ATTinyCore is installed:
+   - Tools->Board->AttinyCore->Attiny25/45/85 (No Bootloader)
+   - Tools-> B.O.D. Level (Only set on bootload) -> Disabled (saves power)
+   - Tools->Chip -> Attiny85
+   - Tools->Clock Source -> 16Mhz (PLL) or 16.5Mhz PLL Tweaked (for a little more performance)
+   - Tools->Programmer -> AVRISP mkII
+   - Tools->Save EEPROM->EEPROM retained
+   - Tools->millis/micros -> Enabled- 
+- Perform the build. 
+   - Sketch->Verify/Compile
+- Next, program the Bootloader (only needs to be done once)
+   - Tools->Burn Bootloader
+- Build and Upload
+   - Sketch->Upload
+   
+Once you have the bootloader programmed, you can add your own sequences and simply build/upload.\
+You can press the top button to change the bottom LED array and the bottom button to change the top.\
+NOTE: you will need to develop on one of the CPU's and then re-connect to the bottom header and program the other one.\
+NOTE: It is absolutely critical you burn the Bootloader before programming since this sets the eFUSE options on the MCU and therefore the clocks/IO's.
 
 ## Develop
 - Load the Arduino sketch in sw folder
